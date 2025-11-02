@@ -179,7 +179,6 @@ game.onUpdateInterval(currentDelay, function () {
     // if delay changed, rebind timer
     if (currentDelay != lastDelay) {
         lastDelay = currentDelay
-        // tiny re-arm trick: queue a no-op; the new onUpdateInterval takes effect immediately
         control.runInParallel(function () { })
     }
 })
